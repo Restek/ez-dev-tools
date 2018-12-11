@@ -1,0 +1,20 @@
+services:
+    restek.ez_dev_tools.command.db.abstract:
+        class: Restek\EzPlatformDevToolsBundle\Command\AbstractCommand
+        autowire: true
+        public: false
+
+    # Commands
+    restek.ez_dev_tools.command.db.export:
+        class: Restek\EzPlatformDevToolsBundle\Command\DatabaseExport
+        autowire: true
+        public: false
+        tags:
+            - { name: 'console.command' }
+
+    restek.ez_dev_tools.command.db.import:
+        class: Restek\EzPlatformDevToolsBundle\Command\DatabaseImport
+        autowire: true
+        public: false
+        tags:
+            - { name: 'console.command' }
