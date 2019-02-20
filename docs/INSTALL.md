@@ -25,6 +25,24 @@ public function registerBundles()
 }
 ```
 
+Add the database configuration in `app/config/config_dev.yml`
+
+```
+bm_backup_manager:
+    database:
+        default:
+            type: mysql
+            host: '%database_host%'
+            port: '%database_port%'
+            database: '%database_name%'
+            user: '%database_user%'
+            pass: '%database_password%'
+    storage:
+        local:
+            type: Local
+            root: '%env(PROJECTMAPPINGFOLDER)%/data'
+```
+
 ## Test
 
 Check that the bundle is installed correctly. 
