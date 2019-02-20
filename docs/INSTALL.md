@@ -19,6 +19,7 @@ public function registerBundles()
 {
     case 'dev':
       --- other dev bundles ---
+      $bundles[] = new BM\BackupManagerBundle\BMBackupManagerBundle();
       $bundles[] = new Restek\EzPlatformDevToolsBundle\EzPlatformDevToolsBundle();
     );
 }
